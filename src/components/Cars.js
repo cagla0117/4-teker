@@ -1,14 +1,25 @@
 import React from 'react'
+import Details from './Details';
+import {Routes, Route, Link, NavLink} from "react-router-dom";
 
-function Cars({item}) {
+function Cars({user}) {
+    console.log('-->',user)
   return (
     <>
     <div className='product'>
-        <img src={item.image} alt=""/> 
-        <h3>{item.brand}</h3>
-        <h6>{item.model}</h6>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThykhS6tByx95mv4BEISM81gBroBLfRwXOjFnGSSo&s" alt=""/> 
+        <h3>{user.brand}</h3>
+        <h6>{user.model}</h6>
         <div className="price">
-            <button typeof='button'>Kirala</button>
+           <Link to ={`/${user.slug}`}> Details </Link>
+            <Details/>
+
+
+
+
+
+
+           {/* <a href='$item.slug'> <button typeof='button' >Details</button></a> */}
         </div> 
         </div>
         <style jsx>{`
