@@ -1,3 +1,4 @@
+import axios, { Axios } from 'axios';
 import React, {useState,useEffect} from 'react'
 import Cars from './Cars';
 
@@ -6,7 +7,8 @@ function Data() {
 
   
      useEffect(( )=> {
-        fetch("https://fow-rent-a-car.herokuapp.com/api/list")
+        axios({
+            url:"https://fow-rent-a-car.herokuapp.com/api/list"})
          .then((res) => res.json())
          .then((data) => setUsers(data));
      }, [] )
