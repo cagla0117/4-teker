@@ -8,6 +8,7 @@ import Detail from "./pages/Detail";
 
 function App() {
   return (
+    
     <Router>
       <div>
         <Routes>
