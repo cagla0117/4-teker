@@ -19,7 +19,7 @@ function Home() {
    return (
       <div>
          <Navbar/>
-         <Searchbar/>
+         {/* <Searchbar/> */}
          <div className='container cars'>
             {users?.map((car,key) => (
                // <li key={user.id}>{user.brand}- {user.model}</li>
