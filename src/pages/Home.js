@@ -21,9 +21,9 @@ function Home() {
          <Navbar/>
          <Searchbar/>
          <div className='container cars'>
-            {users?.map((user,key) => (
+            {users?.map((car,key) => (
                // <li key={user.id}>{user.brand}- {user.model}</li>
-               <Cars user={user} key={key} index={key} />
+               <Cars car={car} key={key} index={key} />
             ))}
          </div>
 

@@ -3,25 +3,24 @@ import Details from './Details';
 import {Routes, Route, Link, NavLink} from "react-router-dom";
 import styled from 'styled-components';
 
-function Cars({user,index}) {
+function Cars({car,index}) {
     // console.log('-->',user)
 
   return (
     <>
     <Container className='product'>
         <img src={`https://picsum.photos/300/300?random=${index}`} alt=""/> 
-        <h3>{user.brand}</h3>
-        <h6>{user.model}</h6>
+        <h3>{car.brand}<hr></hr></h3>
+    <h6>{car.model}<br></br> {car.productionYear}</h6>
         <div className="price">
-           <Link to={`/${user.slug}`}> Details </Link>
-            <Details/>
+           <Link to={`/${car.slug}`}><button> Kirala </button> </Link>
+            
 
 
 
 
 
 
-           {/* <a href='$item.slug'> <button typeof='button' >Details</button></a> */}
         </div> 
         </Container>
 
@@ -36,11 +35,21 @@ const Container = styled.div`
             background: #fff;
             border: 1px solid #ddd;
             margin-bottom: 20px; 
+        
             width: 24%;
             height: 332px;
 
 
           
+        button{
+            border-radius: 8px;
+            width: 180px;
+            height: 40px;
+            justify-content: center;
+            text-align: center;
+            margin-left: 10px;
+
+        }
 
         
 
@@ -50,8 +59,12 @@ const Container = styled.div`
         }
 
          h6{
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 15px;
+            
+
+        }
+
+        h3{
 
         }
         .price {
@@ -61,13 +74,7 @@ const Container = styled.div`
             flex: 1;
             cursor: pointer;
     }
-        
-        .action button[disabled]{
-            opacity: 0.3;
-            cursor: not-alowed;
-        }
 
-        
         `
 export default Cars
 
