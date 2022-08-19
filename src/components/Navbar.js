@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Routes, Route, Link, NavLink} from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,7 +9,8 @@ function Navbar() {
     <a className="site-title" href="/">Site Name</a>
     <ul>
         <li>
-            <a href="/a">About    </a>
+           <Link to={`/`}><a> Home   </a> </Link>
+            
             <a href="/b">Contact   </a>
         </li>
     </ul>
