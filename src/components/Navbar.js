@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function Navbar() {
   return (
-    <container className='nav'>
+    <Container className='nav'>
   
     <a className="site-title" href="/">Site Name</a>
     <ul>
@@ -18,11 +18,11 @@ function Navbar() {
 
     
   
-  </container>
+  </Container>
   )
 }
 
-const container = styled.div`
+const Container = styled.div`
 position: sticky;
 top:0;
 background-color: black;
